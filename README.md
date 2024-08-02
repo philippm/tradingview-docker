@@ -5,6 +5,9 @@
 ```bash
 docker build -t tradingview .
 
+# allow docker to access x server
+xhost +local:docker
+
 # this should launch the docker instance
 docker run -it --rm \
     --env="DISPLAY" \

@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM debian:latest
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     libgbm1 \
     libglib2.0-0 \
     libasound2 \
-    chromium-browser
+    chromium
 
 RUN wget -O - https://tvd-packages.tradingview.com/keyring.gpg | tee /usr/share/keyrings/tradingview-desktop-archive-keyring.gpg >/dev/null
 
